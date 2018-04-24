@@ -1,95 +1,246 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
+@section('content')
+<main>
+	<div class="main-wrapper">
+    <div class="container-fluid">
+    <div style="height: 100vh">
+				<!-- Material input -->
+<div class="md-form input-group">
+	<span class="input-group-btn">
+	<input type="text" id="search" class="form-control col-md-10">
+    <label for="search">Search</label>
+	</span>
+	<button class="btn btn-primary btn-sm"><i class="fa fa-search mr-1"></i> Search</button>
+</div>
+<hr>
+	<div class="row text-left">
+	
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-12 mb-4">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+                    <!--Card-->
+                    <div class="card">
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/food.jpg" class="card-img-top" alt="sample">
+                            <a>
+                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Button-->
+                       
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">Name</h4>
+                            <h5 class="card-title">#ABCD1654748</h5>
+                            <hr>
+                            <!--Text-->
+                            <p class="font-small grey-dark-text mb-0">
+							<h6>Age - 10</h6>
+							<h6>Missing From - Place</h6>
+							<h6>Missing Since - Date and Time</h6>
+							<a>Click Here for More Info</a>
+							</p>
+                        </div>
+                        <!--/.Card content-->
+                        <!-- Card footer -->
+                        <div class="mdb-color lighten-3 text-center">
+                            <ul class="list-unstyled list-inline font-small mt-3">
+                                <li class="list-inline-item pr-2 white-text">
+                                    <i class="fa fa-clock-o pr-1"></i>05/10/2015</li>
+                                <li class="list-inline-item pr-2">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-comments-o pr-1"></i>12</a>
+                                </li>
+                                <li class="list-inline-item pr-2">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-facebook pr-1"> </i>21</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-twitter pr-1"> </i>5</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Card footer -->
+                    </div>
+                    <!--/.Card-->
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
                 </div>
-            @endif
+                <!--Grid column-->
+				<div class="col-lg-3 col-md-12 mb-4">
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                    <!--Card-->
+                    <div class="card">
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/food.jpg" class="card-img-top" alt="sample">
+                            <a>
+                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Button-->
+                       
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">Name</h4>
+                            <h5 class="card-title">#ABCD1654748</h5>
+                            <hr>
+                            <!--Text-->
+                            <p class="font-small grey-dark-text mb-0">
+							<h6>Age - 10</h6>
+							<h6>Missing From - Place</h6>
+							<h6>Missing Since - Date and Time</h6>
+							<a>Click Here for More Info</a>
+							</p>
+                        </div>
+                        <!--/.Card content-->
+                        <!-- Card footer -->
+                        <div class="mdb-color lighten-3 text-center">
+                            <ul class="list-unstyled list-inline font-small mt-3">
+                                <li class="list-inline-item pr-2 white-text">
+                                    <i class="fa fa-clock-o pr-1"></i>05/10/2015</li>
+                                <li class="list-inline-item pr-2">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-comments-o pr-1"></i>12</a>
+                                </li>
+                                <li class="list-inline-item pr-2">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-facebook pr-1"> </i>21</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-twitter pr-1"> </i>5</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Card footer -->
+                    </div>
+                    <!--/.Card-->
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-12 mb-4">
+
+                    <!--Card-->
+                    <div class="card">
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/food.jpg" class="card-img-top" alt="sample">
+                            <a>
+                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Button-->
+                       
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">Name</h4>
+                            <h5 class="card-title">#ABCD1654748</h5>
+                            <hr>
+                            <!--Text-->
+                            <p class="font-small grey-dark-text mb-0">
+							<h6>Age - 10</h6>
+							<h6>Missing From - Place</h6>
+							<h6>Missing Since - Date and Time</h6>
+							<a>Click Here for More Info</a>
+							</p>
+                        </div>
+                        <!--/.Card content-->
+                        <!-- Card footer -->
+                        <div class="mdb-color lighten-3 text-center">
+                            <ul class="list-unstyled list-inline font-small mt-3">
+                                <li class="list-inline-item pr-2 white-text">
+                                    <i class="fa fa-clock-o pr-1"></i>05/10/2015</li>
+                                <li class="list-inline-item pr-2">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-comments-o pr-1"></i>12</a>
+                                </li>
+                                <li class="list-inline-item pr-2">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-facebook pr-1"> </i>21</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-twitter pr-1"> </i>5</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Card footer -->
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+				<div class="col-lg-3 col-md-12 mb-4">
+
+                    <!--Card-->
+                    <div class="card">
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/food.jpg" class="card-img-top" alt="sample">
+                            <a>
+                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Button-->
+                       
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">Name</h4>
+                            <h5 class="card-title">#ABCD1654748</h5>
+                            <hr>
+                            <!--Text-->
+                            <p class="font-small grey-dark-text mb-0">
+							<h6>Age - 10</h6>
+							<h6>Missing From - Place</h6>
+							<h6>Missing Since - Date and Time</h6>
+							<a>Click Here for More Info</a>
+							</p>
+                        </div>
+                        <!--/.Card content-->
+                        <!-- Card footer -->
+                        <div class="mdb-color lighten-3 text-center">
+                            <ul class="list-unstyled list-inline font-small mt-3">
+                                <li class="list-inline-item pr-2 white-text">
+                                    <i class="fa fa-clock-o pr-1"></i>05/10/2015</li>
+                                <li class="list-inline-item pr-2">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-comments-o pr-1"></i>12</a>
+                                </li>
+                                <li class="list-inline-item pr-2">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-facebook pr-1"> </i>21</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="white-text">
+                                        <i class="fa fa-twitter pr-1"> </i>5</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Card footer -->
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+                
+                <!--Grid column-->
+
             </div>
-        </div>
-    </body>
-</html>
+	
+    </div>
+    </div>
+    </div>
+    <!-- /Start your project here-->
+	</main>
+@endsection
