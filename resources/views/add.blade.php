@@ -40,9 +40,9 @@
                                 <div class="md-form form-group">
                                     <select class="form-control" id="gender" name="gender">
 									<option value="">Gender</option>
-									<option value="Male">Male</option>
-									<option value="Female">Female</option>
-									<option value="Other">Other</option>
+									<option value="1">Male</option>
+									<option value="2">Female</option>
+									<option value="3">Other</option>
 									</select>
                                     <label for="gender"></label>
                                 </div>
@@ -119,11 +119,11 @@
                                 <div class="md-form form-group">
 									<select class="form-control" id="complexion" name="complexion">
 									<option value="">Complexion</option>
-									<option value="dark">Dark</option>
-									<option value="fair">Fair</option>
-									<option value="very_fair">Very Fair</option>
-									<option value="wheatish">Wheatish</option>
-									<option value="sallow">Sallow</option>
+									<option value="1">Dark</option>
+									<option value="2">Fair</option>
+									<option value="3">Very Fair</option>
+									<option value="4">Wheatish</option>
+									<option value="5">Sallow</option>
 									</select>
                                      
                                      <label for="complexion"></label>
