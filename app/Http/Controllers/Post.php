@@ -33,7 +33,16 @@ class Post extends Controller
 		$photo = $request->input('photo');
 		$contact = $request->input('contact');
 		$notes = $request->input('notes');
-		
+		// Available alpha caracters
+		$characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+		// generate a pin based on 2 * 7 digits + a random character
+		$pin = mt_rand(1000000, 9999999)
+		. mt_rand(1000000, 9999999)
+		. $characters[rand(0, strlen($characters) - 1)];
+
+		// shuffle the result
+		$string = str_shuffle($pin);
 		$case = new Cases();
 		$case->name = $name;
 		$case->gender = $gender;
@@ -59,6 +68,7 @@ class Post extends Controller
 		$case->updated_by = $updated_by;
 		$case->created_at = $created_at;
 		$case->updated_at = $updated_at;
+		$case->unique_code = 'KL'.$district.$string;
 		$case->save();
 		
 		$case_id = $case->id;
