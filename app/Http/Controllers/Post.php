@@ -72,6 +72,7 @@ class Post extends Controller
 		$case->save();
 		
 		$case_id = $case->id;
-		echo json_encode($case_id);
+		//echo json_encode($case_id);
+		return back()->withInput();
 	}
 }

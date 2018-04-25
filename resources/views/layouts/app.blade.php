@@ -22,7 +22,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-    <a class="navbar-brand" href="#">CodeSec</a>
+    <a class="navbar-brand" href="/">CodeSec</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
         aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -30,13 +30,20 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#"><i class="fa fa-home"></i> Home</a> <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/"><i class="fa fa-home"></i> Home</a> <span class="sr-only">(current)</span></a>
             </li>
 			<li class="nav-item">
                             <a class="nav-link waves-effect waves-light" href="#">
                                 <i class="fa fa-envelope"></i> Contact
                             </a>
                         </li>
+			
+			@if (Auth::guest())
+			<li class="nav-item">
+               <a class="nav-link waves-effect waves-light" href="/login">
+               <i class="fa fa-key"></i> Login</a>
+            </li>
+			@else
 			<li class="nav-item">
                <a class="nav-link waves-effect waves-light" href="#">
                <i class="fa fa-gear"></i> Settings</a>
@@ -46,9 +53,17 @@
                                 <i class="fa fa-user"></i> Profile </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
                                 <a class="dropdown-item waves-effect waves-light" href="#">My account</a>
-                                <a class="dropdown-item waves-effect waves-light" href="#">Log out</a>
+								<a class="dropdown-item waves-effect waves-light" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
                             </div>
                         </li>
+						@endif
         </ul>
 		
     </div>
