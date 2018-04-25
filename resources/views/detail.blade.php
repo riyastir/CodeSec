@@ -14,10 +14,10 @@
 </div>
 <hr>
             <!-- Card -->
-           
+           @foreach($data as $d)
 <div class="jumbotron p-5 text-center text-md-left author-box">
                 <!-- Name -->
-                <h3 class="h3-responsive text-center font-weight-bold dark-grey-text">Case #</h3>
+                <h3 class="h3-responsive text-center font-weight-bold dark-grey-text">Case #: {{$d->unique_code}}</h3>
                 <hr>
                 <div class="row">
                     <!-- Avatar -->
@@ -27,7 +27,7 @@
                     <!-- Author Data -->
                     <div class="col-12 col-md-10">
                         <h5 class="font-weight-bold dark-grey-text mb-3">
-                            <strong>Name</strong>
+                            <strong>{{$d->name}}</strong>
                         </h5>
                         <div class="personal-sm pb-3">
                            
@@ -41,25 +41,25 @@
                                 <i class="fa fa-google-plus mr-2"> </i>
                             </a>
                         </div>
-						<h5>Gender				:</h4>
-						<h5>Age					:</h4>
-						<h5>Missing From		:</h4>
-						<h5>Date of Missing		:</h4>
-						<h5>District			:</h4>
-						<h5>Police Station		:</h4>
-						<h5>Height				:</h4>
-						<h5>Complexion			:</h4>
-						<h5>Scar				:</h4>
-						<h5>Mole				:</h4>
-						<h5>Tatto				:</h4>
-						<h5>Face				:</h4>
-						<h5>Lower Dress			:</h4>
-						<h5>Lower Dress Color	:</h4>
-						<h5>Upper Dress			:</h4>
-						<h5>Upper Dress Color	:</h4>
-						<h5>Contact Number		:</h4>
-						<h5>Notes				:</h4>
-						<h5>Status				:</h4>
+						<h5>Gender				:@if($d->gender == '1')Male @elseif($d->gender == '2') Female @else Other @endif</h4>
+						<h5>Age					: {{$d->age}}</h4>
+						<h5>Missing From		: {{$d->missing_from}}</h4>
+						<h5>Date of Missing		: {{date('d-M-Y', 			  strtotime($d->missing_date))}}</h4>
+						<h5>District			: {{$d->district}}</h4>
+						<h5>Police Station		: {{$d->police_station}}</h4>
+						<h5>Height				: {{$d->height}}</h4>
+						<h5>Complexion			: {{$d->complexion}}</h4>
+						<h5>Scar				: {{$d->scar}}</h4>
+						<h5>Mole				: {{$d->scar}}</h4>
+						<h5>Tatto				: {{$d->tatto}}</h4>
+						<h5>Face				: {{$d->face}}</h4>
+						<h5>Lower Dress			: {{$d->lower_dress}}</h4>
+						<h5>Lower Dress Color	: {{$d->lower_dress_color}}</h4>
+						<h5>Upper Dress			: {{$d->upper_dress}}</h4>
+						<h5>Upper Dress Color	: {{$d->upper_dress_color}}</h4>
+						<h5>Contact Number		: {{$d->contact_number}}</h4>
+						<h5>Notes				: {{$d->notes}}</h4>
+						<h5>Status				: Missing</h4>
                         <div class="row">
 
                             <div class="col-12 mt-1">
@@ -78,11 +78,12 @@
                     </div>
                 </div>
             </div>
-            
+            @endforeach
             <!-- Card -->
 
           </div>
         </div>
       </div>
     </main>
+	
 @endsection
