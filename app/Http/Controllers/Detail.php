@@ -8,6 +8,6 @@ use App\Http\Controllers\Controller;
 class Detail extends Controller
 {
    public function index(){
-	   
+	   return view('detail');
    }
 }

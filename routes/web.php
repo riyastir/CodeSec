@@ -19,5 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/add', 'Add@index')->name('add');
-Route::get('/detail/{id}', 'Detail@index');
+//Route::get('/detail/{id}', 'Detail@index');
+Route::get('/detail/', 'Detail@index');
 Route::post('/post-case', 'Post@cases');
