@@ -71,7 +71,7 @@
 							<div class="col-md-3">
                                 <!-- Material input -->
                                 <div class="md-form form-group">
-                                    <input type="text" class="form-control" id="missing_date" name="missing_date" placeholder="Date of Missing">
+                                    <input type="text" data-provide="datepicker" class="form-control datepicker" id="missing_date" name="missing_date" placeholder="Date of Missing">
                                     <label for="missing_date"></label>
                                 </div>
                             </div>
@@ -856,4 +856,16 @@
         </div>
       </div>
     </main>
+	
+@endsection
+@section('header')
+<link href="/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
+@endsection
+@section('footer')
+<script type="text/javascript" src="/js/bootstrap-datepicker.min.js"></script>
+<script>
+	$('.datepicker').datepicker({
+    format: 'yyyy-mm-dd'
+});
+</script>
 @endsection

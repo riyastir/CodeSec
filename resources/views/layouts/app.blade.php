@@ -19,6 +19,8 @@
     <link href="/css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="/css/style.css" rel="stylesheet">
+	@section('header')
+	@endsection
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark primary-color">
@@ -79,5 +81,6 @@
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="/js/mdb.min.js"></script>
+	@yield('footer')
 </body>
 </html>
