@@ -19,7 +19,7 @@ class Post extends Controller
 		$missing_from = $request->input('missing_from');
 		$missing_date = $request->input('missing_date');
 		$district = $request->input('district');
-		$police_station = $request->input('police_station');
+		$police_station = $request->input('ps');
 		$height = $request->input('height');
 		$complexion = $request->input('complexion');
 		$scar = $request->input('scar');
@@ -30,8 +30,8 @@ class Post extends Controller
 		$lower_dress_color = $request->input('lower_dress_color');
 		$upper_dress = $request->input('upper_dress');
 		$upper_dress_color = $request->input('upper_dress_color');
-		$photo = $request->input('photo');
-		$contact = $request->input('contact');
+		$photo = $request->input('image');
+		$contact_number = $request->input('contact_number');
 		$notes = $request->input('notes');
 		// Available alpha caracters
 		$characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -61,13 +61,13 @@ class Post extends Controller
 		$case->upper_dress = $upper_dress;
 		$case->upper_dress_color = $upper_dress;
 		$case->lower_dress_color = $lower_dress_color;
-		$case->photo = $photo;
+		$case->photo = '';
 		$case->contact_number = $contact_number;
 		$case->notes = $notes;
-		$case->created_by = $created_by;
-		$case->updated_by = $updated_by;
-		$case->created_at = $created_at;
-		$case->updated_at = $updated_at;
+		$case->created_by = Auth::user()->id;;
+		$case->updated_by = Auth::user()->id;;
+		//$case->created_at = $created_at;
+		//$case->updated_at = $updated_at;
 		$case->unique_code = 'KL'.$district.$string;
 		$case->save();
 		

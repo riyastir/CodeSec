@@ -21,14 +21,14 @@
 
                     <!-- Material form register -->
                     <!-- Default horizontal form -->
-                    <form>
+                    <form id="add_case" name="add_case" method="POST" action="/post-case">
                         <!-- Grid row -->
                         <div class="form-row">
                             <!-- Grid column -->
                             <div class="col-md-6">
                                 <!-- Material input -->
                                 <div class="md-form form-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Name">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                                     <label for="name"></label>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
 							<div class="col-md-3">
                                 <!-- Material input -->
                                 <div class="md-form form-group">
-                                    <input type="number" class="form-control" id="age" placeholder="Age">
+                                    <input type="number" class="form-control" id="age" placeholder="Age" name="age">
                                     <label for="age"></label>
                                 </div>
                             </div>
@@ -807,7 +807,7 @@
 							<div class="col-md-3">
                                 <!-- Material input -->
                                 <div class="md-form form-group">
-                                    <input type="file" class="form-control" id="image" placeholder="Image">
+                                    <input type="file" class="form-control" id="image" name="image" placeholder="Image">
                                     <label for="inputCityMD"></label>
                                 </div>
                             </div>
@@ -825,7 +825,7 @@
                             <div class="col-md-12">
                                 <!-- Material input -->
                                 <div class="md-form form-group">
-                                     <input type="text" class="form-control" id="notes" placeholder="Notes">
+                                     <input type="text" class="form-control" id="notes" name="notes" placeholder="Notes">
                                      <label for="notes"></label>
                                 </div>
                             </div>
@@ -840,6 +840,7 @@
                             <!-- Grid column -->
                       </div>
                       <!-- Grid row -->
+					  <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <button type="submit" class="btn btn-primary btn-md">Register</button>
                     </form>
                     <!-- Default horizontal form -->
